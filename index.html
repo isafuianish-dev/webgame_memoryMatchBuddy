@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Match Buddy</title>
+<link rel="icon" type="image/png" href="media/favicon.png">
+<link rel="stylesheet" href="https://isafuianish-dev.github.io/webapp_cdnBuddy/css/tokens.css">
+<link rel="stylesheet" href="https://isafuianish-dev.github.io/webapp_cdnBuddy/css/base.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/theme-init.js" data-app="webgame_memoryMatchBuddy"></script>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="brand-icon" aria-hidden="true"><span class="icon" style="-webkit-mask-image:url(media/icon.svg);mask-image:url(media/icon.svg);"></span></span>
+      <h1>Memory Match Buddy</h1>
+    </div>
+    <div class="topbar-actions">
+      <button id="btnShare" class="btn btn-ghost btn-icon" title="Share Progress" aria-label="Share Progress"></button>
+      <button id="btnHighScores" class="btn btn-ghost btn-icon" title="High Scores" aria-label="High Scores"></button>
+      <button id="btnHelp" class="btn btn-ghost btn-icon" title="Help" aria-label="Help"></button>
+      <button id="btnSettings" class="btn btn-ghost btn-icon" title="Settings" aria-label="Settings"></button>
+    </div>
+  </header>
+
+  <div class="mm-toolbar">
+    <div class="mm-toolbar-left">
+      <div class="status-toggle" id="difficultyToggle">
+        <button type="button" class="status-toggle-option" data-difficulty="easy">Easy</button>
+        <button type="button" class="status-toggle-option" data-difficulty="medium">Medium</button>
+        <button type="button" class="status-toggle-option" data-difficulty="hard">Hard</button>
+        <button type="button" class="status-toggle-option" data-difficulty="expert">Expert</button>
+      </div>
+    </div>
+
+    <div class="mm-scoreboard" role="status" aria-label="Game status">
+      <div class="mm-stat mm-stat-moves" title="Moves made">
+        <span class="mm-stat-icon-cell"><span id="movesIcon"></span></span>
+        <span class="mm-stat-value-cell" id="movesCount">0</span>
+      </div>
+      <div class="mm-stat mm-stat-timer" title="Time elapsed">
+        <span class="mm-stat-icon-cell"><span id="timerIcon"></span></span>
+        <span class="mm-stat-value-cell" id="timeElapsed">00:00</span>
+      </div>
+      <div class="mm-stat mm-stat-best" title="Best moves for this difficulty">
+        <span class="mm-stat-icon-cell"><span id="bestIcon"></span></span>
+        <span class="mm-stat-value-cell" id="bestMoves">--</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="mm-board-wrap">
+    <div class="mm-board-scroll" id="boardScroll">
+      <div class="mm-board" id="board" role="grid" aria-label="Memory match board"></div>
+    </div>
+    <p class="mm-hint">Click a card to flip it &middot; Find matching pairs to clear the board</p>
+  </main>
+
+  <div class="mm-banner" id="banner" hidden></div>
+</div>
+
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/utils.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/icons.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/modal.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/theme.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/confetti.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/settings.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/markdown.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/manual.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
